@@ -1,4 +1,4 @@
-{% set version = '0.2.0' %}
+{% set version = "0.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shiny.blueprint_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shiny.blueprint/shiny.blueprint_{{ version }}.tar.gz
-  sha256: 078483df67fea6416b09e49a3fdf2d1374eaa43fd0cafebf27a2fb7271040cbc
+  sha256: b92dae13388fcb4caf646ebd67050f9860d13522a6f4c54f7764bc62ca4fb6c3
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -45,12 +45,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=shiny.blueprint
   license: LGPL-3.0-only
-  summary: Easily use 'Blueprint', the popular 'React' library from Palantir, in your 'Shiny'
-    app. 'Blueprint' provides a rich set of UI components for creating visually appealing
-    applications and is optimized for building complex, data-dense web interfaces. This
-    package provides most components from the underlying library, as well as special
-    wrappers for some components to make it easy to use them in 'R' without writing
-    'JavaScript' code.
+  summary: Easily use 'Blueprint', the popular 'React' library from Palantir, in your 'Shiny' app. 'Blueprint' provides a rich set of UI components for creating visually appealing applications and is optimized for building complex, data-dense web interfaces. This package provides most components from the underlying library,
+    as well as special wrappers for some components to make it easy to use them in 'R' without writing 'JavaScript' code.
   license_family: LGPL
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
