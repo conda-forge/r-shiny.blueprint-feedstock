@@ -27,13 +27,13 @@ requirements:
     - r-checkmate
     - r-htmltools
     - r-shiny
-    - r-shiny.react >=0.2.2
+    - r-shiny.react >=0.4.0
   run:
     - r-base
     - r-checkmate
     - r-htmltools
     - r-shiny
-    - r-shiny.react >=0.2.2
+    - r-shiny.react >=0.4.0
 
 test:
   commands:
